@@ -5,17 +5,7 @@ class Event {
         this.name = info.name;
     }
 
-    _run(...args) {
-        this.run(...args);
-    }
-
-    /**
-	 * The run method to be overwritten in actual event handlers
-	 * @param {any} param The event parameters emited
-	 * @abstract
-	 * @returns {void}
-	 */
-    async run() {
+    run() {
         // Defined in extension Classes
     }
 

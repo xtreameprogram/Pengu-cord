@@ -36,7 +36,7 @@ class commandLoader {
                 const event = new Event(client);
                 console.log(`${event.name} Loaded`);
                 client.events.set(event.name, event);
-                client.on(event.name, event._run.bind(null, client));
+                client.on(event.name, event.run.bind(null, client));
                 delete require.cache[require.resolve(`${process.cwd()}/events/${file}`)];
             }
         } catch (e) {
