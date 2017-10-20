@@ -6,6 +6,9 @@ class PenguClient extends Discord.Client {
     constructor(config = {}) {
         super(config.clientOptions);
         this.config = config;
+        
+        this.commands = new Discord.Collection();
+        this.aliases = new Discord.Collection();
 
         this.ready = false;
 
