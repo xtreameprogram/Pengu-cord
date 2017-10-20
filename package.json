@@ -1,0 +1,19 @@
+{
+  "name": "pengubot",
+  "version": "3.0.0",
+  "description": "PenguBot ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Discord",
+    "bot"
+  ],
+  "author": "Jacz & AdityaTD",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "github:hydrabolt/discord.js",
+    "performance-now": "^2.1.0"
+  }
+}
