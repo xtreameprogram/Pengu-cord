@@ -67,4 +67,12 @@ class PenguClient extends Discord.Client {
     }
 }
 
+process.on("unhandledRejection", error => console.log(`unhandledRejection:\n${error.stack}`))
+    .on("uncaughtException", error => {
+        console.log(`uncaughtException:\n${error.stack}`);
+        process.exit();
+    })
+    .on("error", error => console.log(`Error:\n${error.stack}`))
+    .on("warn", error => console.log(`Warning:\n${error.stack}`));
+
 module.exports = PenguClient;

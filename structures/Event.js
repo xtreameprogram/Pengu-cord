@@ -3,7 +3,7 @@ class Event {
         if (info.name === undefined) throw Error("No name property detected in Event.");
         this.client = client;
         this.name = info.name;
-        this.enabled = "enabled" in info ? info.enabled : true;
+        this.enabled = info.enabled || true;
     }
 
     _run(...args) {

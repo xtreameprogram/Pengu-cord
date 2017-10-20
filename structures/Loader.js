@@ -9,7 +9,7 @@ class commandLoader {
                 for (const file of files) {
                     if (!file.endsWith(".js")) throw Error("Command file extension must end with .js");
                     const Command = require(`${process.cwd()}/commands/${folder}/${file}`);
-                    const cmd = new Command(client, file);
+                    const cmd = new Command(client);
                     cmd.category = this.toTitleCase(folder);
                     console.log(`${cmd.name} Loaded`);
                     client.commands.set(cmd.name, cmd);
@@ -33,7 +33,7 @@ class commandLoader {
             for (const file of files) {
                 if (!file.endsWith(".js")) throw Error("Event file extension must end with .js");
                 const Event = require(`${process.cwd()}/events/${file}`);
-                const event = new Event(client, file);
+                const event = new Event(client);
                 console.log(`${event.name} Loaded`);
                 client.events.set(event.name, event);
                 client.on(event.name, event._run.bind(null, client));
