@@ -1,9 +1,9 @@
 class Event {
-    constructor(client, file, info = {}) {
+    constructor(client, info = {}) {
         if (info.name === undefined) throw Error("No name property detected in Event.");
-        Object.defineProperty(this, "client", { value: client });
-        this.name = info.name || file.split(".")[0];
-        this.enabled = info.enabled || true;
+        this.client = client;
+        this.name = info.name;
+        this.enabled = "enabled" in info ? info.enabled : true;
     }
 
     _run(...args) {
@@ -16,7 +16,7 @@ class Event {
 	 * @abstract
 	 * @returns {void}
 	 */
-    run() {
+    async run() {
         // Defined in extension Classes
     }
 

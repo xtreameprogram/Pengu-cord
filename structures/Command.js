@@ -1,14 +1,17 @@
 class Command {
-    constructor(client, file, info = {}) {
+    constructor(client, info = {}) {
         if (info.name === undefined) throw Error("No name property detected in command.");
-        if (info.guildOnly === undefined) info.guildOnly = false;
-        Object.defineProperty(this, "client", { value: client });
-        this.name = info.name || file.split(".")[0];
-        this.ownerOnly = info.ownerOnly || false;
-        this.guildOnly = info.guildOnly || false;
+        this.client = client;
+        this.enabled = "enabled" in info ? info.enabled : true;
+        this.name = info.name;
+        this.ownerOnly = !!info.ownerOnly || false;
+        this.guildOnly = !!info.guildOnly || false;
         this.description = info.description || "No description";
+        this.details = info.details || null;
+        this.examples = info.examples || null;
+        this.clientPermissions = info.clientPermissions || null;
+        this.userPermissions = info.userPermissions || null;
         this.aliases = info.aliases || [];
-        this.file = file;
     }
 
     async run() {
