@@ -1,20 +1,48 @@
 {
-  "name": "pengucord",
-  "version": "0.0.5",
-  "description": "PenguBot ",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_from": "pengucord@0.0.4",
+  "_id": "pengucord@0.0.4",
+  "_inBundle": false,
+  "_integrity": "sha512-1O41a5yOR83dtre0VxEgI9lg93K01r2U93/5E7lSNfqE2HgQIoIV56KXkkbDPFsLjq1t3UTDElrcxwLGt1GAEg==",
+  "_location": "/pengucord",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "pengucord@0.0.4",
+    "name": "pengucord",
+    "escapedName": "pengucord",
+    "rawSpec": "0.0.4",
+    "saveSpec": null,
+    "fetchSpec": "0.0.4"
   },
-  "keywords": [
-    "Discord",
-    "bot"
+  "_requiredBy": [
+    "#USER",
+    "/"
   ],
-  "author": "Jacz & AdityaTD",
-  "license": "MIT",
+  "_resolved": "https://registry.npmjs.org/pengucord/-/pengucord-0.0.4.tgz",
+  "_shasum": "3e4e9558f37c916fa5d55f3334a1a9e708ebc92b",
+  "_spec": "pengucord@0.0.4",
+  "_where": "C:\\Users\\Jacz Gaming\\Desktop\\PenguBot\\pengubot-testing-cmd",
+  "author": {
+    "name": "Jacz & AdityaTD"
+  },
+  "bundleDependencies": false,
   "dependencies": {
     "discord.js": "github:hydrabolt/discord.js",
     "fs-nextra": "^0.3.2",
     "performance-now": "^2.1.0"
-  }
+  },
+  "deprecated": false,
+  "description": "PenguBot ",
+  "keywords": [
+    "Discord",
+    "bot"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "pengucord",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.4"
 }

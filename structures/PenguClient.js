@@ -36,9 +36,9 @@ class PenguClient extends Discord.Client {
                 });
             }
         }
-        const loader = new CmdLoader();
-        loader.loadCommands(this);
         this.ready = true;
+        const loader = new CmdLoader();
+        await loader.loadCommands(this);
         this.emit("PenguReady");
     }
 
