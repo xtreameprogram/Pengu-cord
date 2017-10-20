@@ -1,12 +1,13 @@
 const Discord = require("discord.js");
 const path = require("path");
 const now = require("performance-now");
+const CmdLoader = require("./commandLoader");
 
 class PenguClient extends Discord.Client {
     constructor(config = {}) {
         super(config.clientOptions);
         this.config = config;
-        
+
         this.commands = new Discord.Collection();
         this.aliases = new Discord.Collection();
 
@@ -35,7 +36,8 @@ class PenguClient extends Discord.Client {
                 });
             }
         }
-
+        const loader = new CmdLoader();
+        loader.loadCommands(this);
         this.ready = true;
         this.emit("PenguReady");
     }
