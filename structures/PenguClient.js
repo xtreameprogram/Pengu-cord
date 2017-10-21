@@ -65,6 +65,14 @@ class PenguClient extends Discord.Client {
         if (this.config.owner instanceof Array) return this.config.owner.includes(user.id);
         throw new RangeError('The client\'s "owner" option is an unknown value.');
     }
+    
+    get(query) {
+        return;//Return Query Results from new DB
+    }
+    
+    set(query, value) {
+        return; //True if Success and False if Error   
+    }
 }
 
 process.on("unhandledRejection", error => console.log(`unhandledRejection:\n${error.stack}`))
